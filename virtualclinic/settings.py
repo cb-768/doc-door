@@ -147,7 +147,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 
 # Use WhiteNoise CompressedManifestStaticFilesStorage for production-like behavior
 if DEBUG:

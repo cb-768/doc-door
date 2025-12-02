@@ -40,7 +40,7 @@ def setup_view(request):
 
 
 def logout_view(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and hasattr(request.user, 'account'):
         logger.log(Action.ACTION_ACCOUNT, "Account logout",request.user.account)
     # Django deletes the session on logout, so we need to preserve any alerts currently waiting to be displayed
     saved_data = {}
